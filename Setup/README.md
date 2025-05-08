@@ -3,6 +3,10 @@
 <h2>Description</h2>
 Building the Malware Analysis Lab
 <br />
+<p align=center>
+ <img src=../imgs/Flare-VM.png>
+</p>
+
 
 <h2>Necessary ISOs</h2>
 - <a href="https://info.microsoft.com/ww-landing-windows-11-enterprise.html"><b>Windows 11 Enterprise</b></a></br>
@@ -30,9 +34,8 @@ Unblock-File .\install.ps1
 Set-ExecutionPolicy Unrestricted
 .\install.ps1 -customConfig https://raw.githubusercontent.com/HuskyHacks/PMAT-labs/main/config.xml</code></br>
 &ensp;- Create a Snapshot of the VM post-Flare install.</br>
-
+</br>
 This may take a while to full install all tools. Also, you will need to pull your Malware for analysis from a trustworthy source (Recommend prior to Flare-VM install. I struggled to pull down malware after install).
-
 <!--
  ```diff
 - text in red
