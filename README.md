@@ -1,7 +1,7 @@
 <h1>Practical Malware Analysis and Triage</h1>
 
 <h2>Description</h2>
-Within Cyber Security, there is a small subsection that focuses on studying malware and how it interacts with its targeted environment. [TCM Security](https://academy.tcm-sec.com/p/practical-malware-analysis-triage) provides a course that introduces cyber security professionals to Malware Analysis and Triage.
+Within Cyber Security, there is a small subsection that focuses on studying malware and how it interacts with its targeted environment. <a href="https://academy.tcm-sec.com/p/practical-malware-analysis-triage">TCM Security</a> provides a course that introduces cyber security professionals to Malware Analysis and Triage.
 <br />
 
 
