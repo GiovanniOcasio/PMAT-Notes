@@ -13,14 +13,14 @@ Building the Malware Analysis Lab
 - <a href="https://github.com/HuskyHacks/PMAT-labs"><b>PMAT Labs</b></a>
 
 <h2>Building The Lab</h2>
-- Download the necessary ISOs and create the associated Virtual Machines (Windows 11 and Remux). </br>
-- (Optional) Download and Install the Virtual Box Guest Edition. </br>
-- Remnux is setup out of the box for the lab </br>
-- Create Flare-VM with Windows 11 VM
-  - Download Windows Terminal from Windows Store
-  - Disable Proxy Auto Detect (Search Proxy Settings) 
-  - Disable Tamper Protection (Search Defender)
-  - Disable AV/Defender in GPO (GPEdit)
+1. Download the necessary ISOs and create the associated Virtual Machines (Windows 11 and Remux). </br>
+2. (Optional) Download and Install the Virtual Box Guest Edition. </br>
+3. Remnux is setup out of the box for the lab </br>
+4. Create Flare-VM with Windows 11 VM </br>
+&ensp;- Download Windows Terminal from Windows Store </br>
+&ensp;- Disable Proxy Auto Detect (Search Proxy Settings) </br>
+&ensp;- Disable Tamper Protection (Search Defender) </br>
+&ensp;- Disable AV/Defender in GPO (GPEdit) </br>
     - Administrative Templates → Windows Components → Microsoft Defender Antivirus → Enable “Turn off Microsoft Defender Antivirus”</br>
   - Disable Windows Firewall in GPO (GPEdit)</br>
     - Administrative Templates → Network → Network Connections → Windows Defender Firewall → Domain/Standard Profile → Disable “Protect All Network Connections”</br>
