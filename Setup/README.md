@@ -21,15 +21,15 @@ Building the Malware Analysis Lab
 &ensp;- Disable Proxy Auto Detect (Search Proxy Settings) </br>
 &ensp;- Disable Tamper Protection (Search Defender) </br>
 &ensp;- Disable AV/Defender in GPO (GPEdit) </br>
-    - Administrative Templates → Windows Components → Microsoft Defender Antivirus → Enable “Turn off Microsoft Defender Antivirus”</br>
-  - Disable Windows Firewall in GPO (GPEdit)</br>
-    - Administrative Templates → Network → Network Connections → Windows Defender Firewall → Domain/Standard Profile → Disable “Protect All Network Connections”</br>
-  - Run the following commands to setup Flare-VM:</br>
+&ensp;&ensp;- Administrative Templates → Windows Components → Microsoft Defender Antivirus → Enable “Turn off Microsoft Defender Antivirus”</br>
+&ensp;- Disable Windows Firewall in GPO (GPEdit)</br>
+&ensp;&ensp;- Administrative Templates → Network → Network Connections → Windows Defender Firewall → Domain/Standard Profile → Disable “Protect All Network Connections”</br>
+&ensp;- Run the following commands to setup Flare-VM:</br>
 <code>(New-Object net.webclient).DownloadFile('https://raw.githubusercontent.com/mandiant/flare-vm/main/install.ps1',"$([Environment]::GetFolderPath("Desktop"))\install.ps1")
 Unblock-File .\install.ps1
 Set-ExecutionPolicy Unrestricted
 .\install.ps1 -customConfig https://raw.githubusercontent.com/HuskyHacks/PMAT-labs/main/config.xml</code></br>
-- Create a Snapshot of the VM post-Flare install.</br>
+&ensp;- Create a Snapshot of the VM post-Flare install.</br>
 
 This may take a while to full install all tools. Also, you will need to pull your Malware for analysis from a trustworthy source (Recommend prior to Flare-VM install. I struggled to pull down malware after install).
 
