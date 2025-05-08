@@ -28,9 +28,10 @@ Building the Malware Analysis Lab
 <code>(New-Object net.webclient).DownloadFile('https://raw.githubusercontent.com/mandiant/flare-vm/main/install.ps1',"$([Environment]::GetFolderPath("Desktop"))\install.ps1")
 Unblock-File .\install.ps1
 Set-ExecutionPolicy Unrestricted
-.\install.ps1 -customConfig https://raw.githubusercontent.com/HuskyHacks/PMAT-labs/main/config.xml</code>
+.\install.ps1 -customConfig https://raw.githubusercontent.com/HuskyHacks/PMAT-labs/main/config.xml</code></br>
+- Create a Snapshot of the VM post-Flare install.</br>
 
-
+This may take a while to full install all tools. Also, you will need to pull your Malware for analysis from a trustworthy source (Recommend prior to Flare-VM install. I struggled to pull down malware after install).
 
 <!--
  ```diff
