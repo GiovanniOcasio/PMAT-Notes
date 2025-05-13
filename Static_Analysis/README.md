@@ -3,6 +3,7 @@
 ## Table of Contents
 [Hashing Malware](#hashing-malware) </br>
 [Strings and FLOSS](#strings-and-floss) </br>
+[PEViewer Analysis](#peviewer) </br>
 
 <p align="center">
   <img src="../imgs/Flare-VM.png" alt="Flare-VM">
@@ -37,3 +38,5 @@ Strings and FLOSS are tools that can be used to extract an array of characters (
   <br>
   <img src="../imgs/FLOSS_Output.png" alt="FLOSS Extracted Strings">
 </p>
+
+## PEViewer
