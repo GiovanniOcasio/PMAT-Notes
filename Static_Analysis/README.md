@@ -4,6 +4,7 @@
 [Hashing Malware](#hashing-malware) </br>
 [Strings and FLOSS](#strings-and-floss) </br>
 [PEView Analysis](#peview) </br>
+[PEStudio](#pestudio)</br>
 
 <p align="center">
   <img src="../imgs/Flare-VM.png" alt="Flare-VM">
@@ -58,6 +59,28 @@ We can then compare the Virtual Size and the Raw Data Size in the IMAGE_SECTION_
   <img src="../imgs/virt_size.png" alt="Virtual Data Size">
 </p></br>
 
+Now looking at a packed Malware we notice certain differences like SECTION UPX0 which is an indicator that the binary was packed with the UPX packer. We can also see that in the IMPORT Address Table is significantly smaller than a normal IMPORT Address Table would be.
+
 <p align="center">
-  <img src="../imgs/raw_size.png" alt="Raw Data Size">
+  <img src="../imgs/packed_mal1.png" alt="Packed Malware">
 </p></br>
+
+We can also compare virtual size and raw data size and now we notice there is a big difference in size:
+
+<p align="center">
+  <img src="../imgs/packed_mal2.png" alt="Packed Malware">
+</p></br>
+
+We can also check what Windows APIs the binary may be leveraging under SECTION.rdata → IMPORT Address Table. We can also check if the APIs are commonly used by malicious binaries by checking MalAPI.io or reading the Windows Documentation:
+<p align="center">
+  <img src="../imgs/import_address.png" alt="IMPORT Address Table">
+</p></br>
+
+## PEStudio
+
+Lastly we can automate a lot of these processes by using a tool known as PEStudio. PEStudio can generate file hashes, pull strings from binaries, view libraries and identify potentially malicious ones, etc.:
+
+<p align="center">
+  <img src="../imgs/pestudio.png" alt="PEStudio">
+</p></br>
+
