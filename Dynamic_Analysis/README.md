@@ -2,8 +2,8 @@
 
 ## Table of Contents
 [Before Running the Malware](#before-running-the-malware) </br>
-[Strings and FLOSS](#strings-and-floss) </br>
-[PEView Analysis](#peview) </br>
+[Running Malware](#running-malware-&-network-signatures) </br>
+[Host-Based Indicators](#host-based-indiciators) </br>
 [PEStudio](#pestudio)</br>
 
 <p align="center">
@@ -12,25 +12,29 @@
 
 ## Before Running The Malware
 
-The first thing an analyst should do when working with malware is to gather the binary's hash and compare it to a known hash. If there is no known hash, the analyst should still collect it:
+Before we run the malware for Dynamic Analysis we want to ensure our environment is set up to capture any network traffic that may be occurring. Within Remnux we want to ensure INetSim is running, as well as WireShark, and on the Flare-VM host we want to ensure that our DNS is configured to be the Remnux host:
 
 <p align="center">
-  <img src="../imgs/sha256_hash.png" alt="SHA-256 Hash">
+  <img src="../imgs/dast_setup.png" alt="Setup">
 </p>
 
+Next, we can use information gathered from our Static Analysis to configure WireShark to search for certain traffic:
+
 <p align="center">
-  <img src="../imgs/md5_hash.png" alt="MD5 Hash">
+  <img src="../imgs/static_notes.png" alt="Notes">
 </p>
 
-These hashes can be submitted to tools like VirusTotal to help identify the malware.
+We can have WireShark search for HTTP request with certain parts of the URL
+<p align="center">
+  <img src="../imgs/wireshark_search.png" alt="WireShark">
+</p>
 
-## Strings and FLOSS
+## Running Malware & Network Signatures
 
-Strings and FLOSS are tools that can be used to extract an array of characters (typically longer than 4 bytes) from a binary. FLOSS offers enhanced functionality by analyzing and compiling obfuscated strings, presenting them in the output.
+We can run the malware on our Flare-VM and monitor the network behavior on our Remnux machine in WireShark:
 
 <p align="center">
-  <strong>Strings Output</strong><br>
-  <img src="../imgs/strings.png" alt="Strings Output">
+  <img src="../imgs/wireshark_output.png" alt="WireShark Output">
 </p>
 
 <p align="center">
@@ -40,7 +44,8 @@ Strings and FLOSS are tools that can be used to extract an array of characters (
   <img src="../imgs/FLOSS_Output.png" alt="FLOSS Extracted Strings">
 </p>
 
-## PEView
+## Host-Based Indicators
+
 Another tool that can assist in static analysis of malware is PEViewer. This tool will allow us to view the structure of the binary and the date it was compiled, along with other information. For example when we open the binary in PEView we can check the Magic Number to determine what kind of binary it is:</br>
 
 <p align="center">
