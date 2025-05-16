@@ -2,7 +2,7 @@
 
 ## Table of Contents
 [Before Running the Malware](#before-running-the-malware) </br>
-[Running Malware](#running-malware-&-network-signatures) </br>
+[Running Malware](#running-malware-and-network-signatures) </br>
 [Host-Based Indicators](#host-based-indiciators) </br>
 [PEStudio](#pestudio)</br>
 
@@ -29,7 +29,7 @@ We can have WireShark search for HTTP request with certain parts of the URL
   <img src="../imgs/wireshark_search.png" alt="WireShark">
 </p>
 
-## Running Malware & Network Signatures
+## Running Malware and Network Signatures
 
 We can run the malware on our Flare-VM and monitor the network behavior on our Remnux machine in WireShark:
 
@@ -44,7 +44,7 @@ We can run the malware on our Flare-VM and monitor the network behavior on our R
   <img src="../imgs/FLOSS_Output.png" alt="FLOSS Extracted Strings">
 </p>
 
-## Host-Based Indicators
+## Host Based Indicators
 
 Another tool that can assist in static analysis of malware is PEViewer. This tool will allow us to view the structure of the binary and the date it was compiled, along with other information. For example when we open the binary in PEView we can check the Magic Number to determine what kind of binary it is:</br>
 
