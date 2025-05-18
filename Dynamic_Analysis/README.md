@@ -5,7 +5,6 @@
 - [Running Malware and Network Signatures](#running-malware-and-network-signatures)  
 - [Host-Based Indicators](#host-based-indicators)
   - [Procmon](#procmon)  
-- [PEStudio](#pestudio)
 
 <p align="center">
   <img src="../imgs/Flare-VM.png" alt="Flare-VM">
