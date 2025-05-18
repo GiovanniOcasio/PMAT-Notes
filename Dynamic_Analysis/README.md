@@ -3,7 +3,8 @@
 ## Table of Contents
 - [Before Running the Malware](#before-running-the-malware)  
 - [Running Malware and Network Signatures](#running-malware-and-network-signatures)  
-- [Host-Based Indicators](#host-based-indicators)  
+- [Host-Based Indicators](#host-based-indicators)
+  - [Procmon](#procmon)  
 - [PEStudio](#pestudio)
 
 <p align="center">
@@ -46,46 +47,29 @@ We can run the malware on our Flare-VM and monitor the network behavior on our R
 
 ## Host-Based Indicators
 
-Another tool that can assist in static analysis of malware is PEViewer. This tool allows us to view the structure of the binary, the date it was compiled, and other information. For example, when we open the binary in PEView, we can check the Magic Number to determine what kind of binary it is:
+After analyzing what the malware could be doing on the network, it is imperative that we revert to a clean snapshot of our Flare-VM. Since we were focused on the network actions the malware was taking we didn't analyze what it was doing on the host. We can monitor host activity using a tool known as Procmon
+
+## Procmon
 
 <p align="center">
-  <img src="../imgs/magic_byte.png" alt="Magic Byte">
+  <img src="../imgs/procmon.png" alt="Procmon">
 </p>
 
-We can also see the date the binary was compiled by going to `IMAGE_NT_HEADER → IMAGE_FILE_HEADER` and viewing the Time Date Stamp:
+We can run the malware and filter procmon to display actions taken by the malware:
 
 <p align="center">
-  <img src="../imgs/date_stamp.png" alt="Time Date Stamp">
+  <img src="../imgs/procmon_filter.png" alt="Filtering in Procmon">
 </p>
 
-We can then compare the Virtual Size and the Raw Data Size in the `IMAGE_SECTION_HEADER .text` section to determine if the malware is packed or unpacked. If the virtual size is significantly larger than the Raw Data Size, it is safe to assume that the malware is packed. We can convert the hex data value to determine the size in bytes using the programmer calculator:
+Now when we run the malware we can see all the actions the malware takes:
 
 <p align="center">
-  <img src="../imgs/virt_size.png" alt="Virtual Data Size">
+  <img src="../imgs/malware_in_procmon.png" alt="Malware Process">
 </p>
 
-Now, looking at a packed malware sample, we notice certain differences like `SECTION UPX0`, which is an indicator that the binary was packed with the UPX packer. We can also see that the IMPORT Address Table is significantly smaller than a normal one would be:
+From here we would want to monitor the actions the malware takes like making changes to the registry or creating files. We should also run the malware without INetSim running to see how the malware interacts with the host if it's not connected to the network:
 
 <p align="center">
-  <img src="../imgs/packed_mal1.png" alt="Packed Malware">
+  <img src="../imgs/no_inetsim.png" alt="INetSim Disabled">
 </p>
 
-We can also compare virtual size and raw data size and now notice there is a big difference in size:
-
-<p align="center">
-  <img src="../imgs/packed_mal2.png" alt="Packed Malware">
-</p>
-
-We can also check what Windows APIs the binary may be leveraging under `SECTION.rdata → IMPORT Address Table`. Additionally, we can check if the APIs are commonly used by malicious binaries by checking [MalAPI.io](https://malapi.io) or reading the Windows Documentation:
-
-<p align="center">
-  <img src="../imgs/import_address.png" alt="IMPORT Address Table">
-</p>
-
-## PEStudio
-
-Lastly, we can automate many of these processes using a tool known as PEStudio. PEStudio can generate file hashes, extract strings from binaries, view libraries, and identify potentially malicious ones:
-
-<p align="center">
-  <img src="../imgs/pestudio.png" alt="PEStudio">
-</p>
