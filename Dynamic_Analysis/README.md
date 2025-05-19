@@ -4,7 +4,8 @@
 - [Before Running the Malware](#before-running-the-malware)  
 - [Running Malware and Network Signatures](#running-malware-and-network-signatures)  
 - [Host-Based Indicators](#host-based-indicators)
-  - [Procmon](#procmon)  
+  - [Procmon](#procmon)
+  - [TCPView](#tcpview) 
 
 <p align="center">
   <img src="../imgs/Flare-VM.png" alt="Flare-VM">
@@ -72,3 +73,16 @@ From here we would want to monitor the actions the malware takes like making cha
   <img src="../imgs/no_inetsim.png" alt="INetSim Disabled">
 </p>
 
+## TCPView
+
+TCPView is a Windows program that will show you detailed listings of all TCP and UDP endpoints on your system, including the local and remote addresses and state of TCP connections. TCPView also reports the name of the process that owns the endpoint.
+
+<p align="center">
+  <img src="../imgs/tcpview.png" alt="TCPView">
+</p>
+
+This tool is useful because it can monitor TCP connections made locally that WireShark won't be able to capture:
+
+<p align="center">
+  <img src="../imgs/tcpview_analysis.png" alt="TCPView Analysis">
+</p>
