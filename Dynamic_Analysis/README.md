@@ -73,6 +73,12 @@ From here we would want to monitor the actions the malware takes like making cha
   <img src="../imgs/no_inetsim.png" alt="INetSim Disabled">
 </p>
 
+Another thing we can take a look at is the child process that a malware may spawn. In ProcMon we can look at Process Tree to view the child processes our malware has spawned:
+
+<p align="center">
+  <img src="../imgs/child_process.png" alt="Child Processes">
+</p>
+
 ## TCPView
 
 TCPView is a Windows program that will show you detailed listings of all TCP and UDP endpoints on your system, including the local and remote addresses and state of TCP connections. TCPView also reports the name of the process that owns the endpoint.
