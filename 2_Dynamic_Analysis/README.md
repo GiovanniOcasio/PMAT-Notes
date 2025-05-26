@@ -34,6 +34,8 @@ We can have Wireshark search for HTTP requests with certain parts of the URL:
 
 ## Network Signatures
 
+## WireShark
+
 We can run the malware on our Flare-VM and monitor the network behavior on our Remnux machine in Wireshark:
 
 <p align="center">
