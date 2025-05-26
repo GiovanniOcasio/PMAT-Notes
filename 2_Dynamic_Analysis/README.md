@@ -2,10 +2,11 @@
 
 ## Table of Contents
 - [Before Running the Malware](#before-running-the-malware)  
-- [Running Malware and Network Signatures](#running-malware-and-network-signatures)  
+- [Network Signatures](#network-signatures)
+  - [WireShark 🦈](#wireshark)
 - [Host-Based Indicators](#host-based-indicators)
-  - [Procmon](#procmon)
-  - [TCPView](#tcpview) 
+  - [Procmon 📸](#procmon)
+  - [TCPView 👨‍💻](#tcpview) 
 
 <p align="center">
   <img src="../imgs/Flare-VM.png" alt="Flare-VM">
@@ -31,7 +32,7 @@ We can have Wireshark search for HTTP requests with certain parts of the URL:
   <img src="../imgs/wireshark_search.png" alt="Wireshark">
 </p>
 
-## Running Malware and Network Signatures
+## Network Signatures
 
 We can run the malware on our Flare-VM and monitor the network behavior on our Remnux machine in Wireshark:
 
