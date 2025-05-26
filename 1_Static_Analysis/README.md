@@ -1,10 +1,10 @@
 # Static Analysis
 
 ## Table of Contents
-[Hashing Malware](#hashing-malware) </br>
-[Strings and FLOSS](#strings-and-floss) </br>
-[PEView Analysis](#peview) </br>
-[PEStudio](#pestudio)</br>
+[Hashing Malware 🧾](#hashing-malware) </br>
+[Strings and FLOSS 🔤](#strings-and-floss) </br>
+[PEView Analysis 🔎](#peview) </br>
+[PEStudio 🖥️](#pestudio)</br>
 
 <p align="center">
   <img src="../imgs/Flare-VM.png" alt="Flare-VM">
