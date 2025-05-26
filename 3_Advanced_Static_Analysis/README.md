@@ -1,7 +1,7 @@
 # Static Analysis
 
 ## Table of Contents
-[Disassembling With Cutter](#disassembling-with-cutter) </br>
+[Disassembling With Cutter 🛠️](#disassembling-with-cutter) </br>
 
 <p align="center">
   <img src="../imgs/Flare-VM.png" alt="Flare-VM">
