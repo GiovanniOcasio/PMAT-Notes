@@ -28,7 +28,7 @@ Once you've attached malware to the debugger, you can run the malware with `F9` 
 Here we can see something similar to what we found in Cutter, but the malware is actually running so we can see the actual data being written to memory:
 
 <p align=center>
-  <img src="../imgs/.png">
+  <img src="../imgs/strings_in_memory.png">
 </p>
 
 
