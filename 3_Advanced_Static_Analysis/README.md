@@ -2,9 +2,6 @@
 
 ## Table of Contents
 [Disassembling With Cutter](#disassembling-with-cutter) </br>
-[Strings and FLOSS](#strings-and-floss) </br>
-[PEView Analysis](#peview) </br>
-[PEStudio](#pestudio)</br>
 
 <p align="center">
   <img src="../imgs/Flare-VM.png" alt="Flare-VM">
@@ -36,13 +33,13 @@ Cutter also has a graph function that can layout the flow of an application. Thi
   <img src="../imgs/cutter_graph.png">
 </p>
 
-Lastly, we can use the decompiler tool within Cutter, which will try to replicate the source code of an executable for analysis.:
+Lastly, we can use the decompiler tool within Cutter, which will try to replicate the source code of an executable for analysis:
 
 <p align=center>
   <img src="../imgs/cutter_decompiler.png">
 </p>
 
+From here, we can review the parts of the binary and piece together what may be going on. For example, we can jump to calls for Windows APIs and check what is being pushed to these APIs.
 
-## PEStudio
 
 
